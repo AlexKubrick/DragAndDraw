@@ -1,8 +1,12 @@
 package com.bignerdranch.android.draganddraw
 
 import android.graphics.PointF
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
 
-data class Box(val start: PointF) {
+//Chapter 24. Challenge: Saving State
+@Parcelize
+data class Box(val start: PointF): Parcelable {
 
     var end: PointF = start
 
